@@ -33,11 +33,11 @@ Command-line Options
 ```
 Usage: ./sendsubghz [options] <file.sub>
 Options:
-  -f freq     Override frequency in Hz (default or from file)
-  -r count    Repeat message this many times (default: 1)
-  -p pause    Microseconds pause between repeats (default: 1000)
-  -d          Dry run (don't transmit)
-  -h          Show this help
+  -f freq      Override frequency in Hz (e.g., 433920000) (default: from file or 433.92MHz)
+  -r count     Repeat message this many times (default: 1)
+  -p pause_us  Microseconds pause between repeats (default: 10000)
+  -d           Dry run (parse and print info, but don't transmit)
+  -h           Show this help
 ```
 The program return 0 if message send.
 
@@ -47,4 +47,3 @@ The program return 0 if message send.
 - This program currently supports only static key transmission. Rolling code protocols like Keeloq and NiceFlor are not supported.
 
 - The program is designed to work with Flipper Zero sub-GHz files (.sub). It does not generate these files; you will need to dump them from your Flipper Zero first.
-
